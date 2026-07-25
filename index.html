@@ -1,17 +1,5 @@
 [
   {
-    "burstObservatory": {
-      "pingConfig": {
-        "connectivity": "",
-        "destination": "http://www.gstatic.com/generate_204",
-        "interval": "1m",
-        "sampling": 1,
-        "timeout": "3s"
-      },
-      "subjectSelector": [
-        "proxy"
-      ]
-    },
     "dns": {
       "queryStrategy": "UseIP",
       "servers": [
@@ -697,6 +685,22 @@
       }
     ],
     "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "AUTO_BALANCER",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ],
+      "domainMatcher": "hybrid",
       "balancers": [
         {
           "fallbackTag": "proxy",
@@ -718,26 +722,8 @@
           },
           "tag": "AUTO_BALANCER"
         }
-      ],
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "block",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
       ]
-    }
-  },
-  {
+    },
     "burstObservatory": {
       "pingConfig": {
         "connectivity": "",
@@ -749,7 +735,9 @@
       "subjectSelector": [
         "proxy"
       ]
-    },
+    }
+  },
+  {
     "dns": {
       "queryStrategy": "UseIP",
       "servers": [
@@ -1171,6 +1159,22 @@
       }
     ],
     "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "AUTO_BALANCER",
+          "network": "tcp,udp",
+          "type": "field"
+        }
+      ],
+      "domainMatcher": "hybrid",
       "balancers": [
         {
           "fallbackTag": "proxy",
@@ -1192,22 +1196,18 @@
           },
           "tag": "AUTO_BALANCER"
         }
-      ],
-      "domainMatcher": "hybrid",
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "outboundTag": "block",
-          "protocol": [
-            "bittorrent"
-          ],
-          "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "http://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 1,
+        "timeout": "3s"
+      },
+      "subjectSelector": [
+        "proxy"
       ]
     }
   },
@@ -1303,7 +1303,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1312,33 +1311,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -1435,7 +1407,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1444,33 +1415,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -1567,7 +1511,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1576,33 +1519,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -1699,7 +1615,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1708,33 +1623,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -1831,7 +1719,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1840,33 +1727,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -1963,7 +1823,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -1972,33 +1831,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2095,7 +1927,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2104,33 +1935,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2182,7 +1986,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "remarks": "🇷🇺 Россия",
+    "remarks": "🇷🇺 Россия YouTube 🎬",
     "outbounds": [
       {
         "tag": "proxy",
@@ -2227,7 +2031,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2236,33 +2039,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2359,7 +2135,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2368,33 +2143,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2491,7 +2239,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2500,33 +2247,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2623,7 +2343,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2632,33 +2351,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2755,7 +2447,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2764,33 +2455,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -2887,7 +2551,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -2896,33 +2559,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3019,7 +2655,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3028,33 +2663,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3151,7 +2759,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3160,33 +2767,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3283,7 +2863,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3292,33 +2871,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3415,7 +2967,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3424,33 +2975,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3547,7 +3071,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3556,33 +3079,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3679,7 +3175,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3688,33 +3183,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3811,7 +3279,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3820,33 +3287,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -3943,7 +3383,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -3952,33 +3391,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4075,7 +3487,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4084,33 +3495,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4207,7 +3591,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4216,33 +3599,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4339,7 +3695,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4348,33 +3703,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4425,7 +3753,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "remarks": "Обход глушилок 👇",
+    "remarks": "Обход глушилки 👇 | VLESS / TCP / REALITY",
     "outbounds": [
       {
         "protocol": "freedom",
@@ -4542,7 +3870,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4551,33 +3878,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4674,7 +3974,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4683,33 +3982,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4806,7 +4078,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4815,33 +4086,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -4938,7 +4182,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -4947,33 +4190,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5070,7 +4286,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5079,33 +4294,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5202,7 +4390,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5211,33 +4398,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5334,7 +4494,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5343,33 +4502,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5466,7 +4598,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5475,33 +4606,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5598,7 +4702,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5607,33 +4710,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5730,7 +4806,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5739,33 +4814,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
@@ -5862,7 +4910,6 @@
       }
     ],
     "routing": {
-      "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
@@ -5871,33 +4918,6 @@
             "bittorrent"
           ],
           "type": "field"
-        },
-        {
-          "balancerTag": "AUTO_BALANCER",
-          "network": "tcp,udp",
-          "type": "field"
-        }
-      ],
-      "balancers": [
-        {
-          "fallbackTag": "proxy",
-          "selector": [
-            "proxy"
-          ],
-          "strategy": {
-            "type": "leastLoad",
-            "settings": {
-              "baselines": [
-                "300ms",
-                "700ms",
-                "1.5s"
-              ],
-              "expected": 1,
-              "maxRTT": "2s",
-              "tolerance": 0.25
-            }
-          },
-          "tag": "AUTO_BALANCER"
         }
       ]
     }
