@@ -475,14 +475,14 @@
           ]
         },
         "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
+          "network": "grpc",
+          "security": "tls",
+          "tlsSettings": {
             "serverName": "sca12.afterdomain.shop",
-            "fingerprint": "firefox",
-            "spiderX": "/",
-            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
-            "shortId": "00000000"
+            "allowInsecure": false
+          },
+          "grpcSettings": {
+            "serviceName": ""
           }
         },
         "mux": {
@@ -2917,14 +2917,14 @@
           ]
         },
         "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
+          "network": "grpc",
+          "security": "tls",
+          "tlsSettings": {
             "serverName": "sca12.afterdomain.shop",
-            "fingerprint": "firefox",
-            "spiderX": "/",
-            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
-            "shortId": "00000000"
+            "allowInsecure": false
+          },
+          "grpcSettings": {
+            "serviceName": ""
           }
         },
         "mux": {
@@ -3839,6 +3839,480 @@
           "protocol": [
             "bittorrent"
           ],
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "burstObservatory": {
+      "pingConfig": {
+        "connectivity": "",
+        "destination": "http://www.gstatic.com/generate_204",
+        "interval": "1m",
+        "sampling": 1,
+        "timeout": "3s"
+      },
+      "subjectSelector": [
+        "proxy"
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "settings": {},
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        },
+        "tag": "http"
+      }
+    ],
+    "log": {
+      "loglevel": "warning"
+    },
+    "remarks": "⚡ Автоподбор LTE",
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "77.110.115.58",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "a4gzDiT4d3GfZCFqxM2Cv8Yv3GxhWP-euKCiDaiBZ1Y",
+            "shortId": "54f02ac51faf5052"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.14",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
+            "shortId": "005755e0cf80d989"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.244",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "e2Fii14L7LQHE81w7F6YW39RWNGx1VVpVxN2wYnsOQ4",
+            "shortId": "9cb7868839516f6f"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.244",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "e2Fii14L7LQHE81w7F6YW39RWNGx1VVpVxN2wYnsOQ4",
+            "shortId": "9cb7868839516f6f"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.14",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
+            "shortId": "005755e0cf80d989"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.14",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
+            "shortId": "005755e0cf80d989"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.14",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "10XujgSZQDT5X5lmH0BLh6R99YDSieb5xvGuNXZtXDk",
+            "shortId": "005755e0cf80d989"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.244",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "e2Fii14L7LQHE81w7F6YW39RWNGx1VVpVxN2wYnsOQ4",
+            "shortId": "823af57632e5b8ec"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "213.108.1.244",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "e2Fii14L7LQHE81w7F6YW39RWNGx1VVpVxN2wYnsOQ4",
+            "shortId": "823af57632e5b8ec"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "45.137.43.43",
+              "port": 8080,
+              "users": [
+                {
+                  "id": "52a42ca3-4969-4a19-b037-6cbebfcc27da",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.apple.com",
+            "fingerprint": "firefox",
+            "spiderX": "/",
+            "publicKey": "fPalnpbqFtS0G453ym0_sCwcJuqPvKEU45WXRRpA2E8",
+            "shortId": "e950fa4d1e7aed62"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "res.datanode-internal.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "402ced46-cf91-41f3-87a4-0a1a9e939a35",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5.ru",
+            "fingerprint": "qq",
+            "spiderX": "/",
+            "publicKey": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic",
+            "shortId": "abbcd128"
+          }
+        },
+        "mux": {
+          "enabled": false
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "routing": {
+      "balancers": [
+        {
+          "fallbackTag": "proxy",
+          "selector": [
+            "proxy"
+          ],
+          "strategy": {
+            "settings": {
+              "baselines": [
+                "300ms",
+                "700ms",
+                "1.5s"
+              ],
+              "expected": 1,
+              "maxRTT": "2s",
+              "tolerance": 0.25
+            },
+            "type": "leastLoad"
+          },
+          "tag": "AUTO_BALANCER"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "outboundTag": "block",
+          "protocol": [
+            "bittorrent"
+          ],
+          "type": "field"
+        },
+        {
+          "balancerTag": "AUTO_BALANCER",
+          "network": "tcp,udp",
           "type": "field"
         }
       ]
