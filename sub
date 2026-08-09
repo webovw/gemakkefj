@@ -50,7 +50,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера",
+      "serverDescription": "Auto Balance",
       "profile-title": "𝗣𝗵𝗹𝘂𝘅 𝘃𝗽𝗻🔥",
       "profile-update-interval": 1,
       "profile-web-page-url": "https://phluxvpn.hs.vc",
@@ -1428,7 +1428,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера"
+      "serverDescription": "Auto Balance"
     },
     "observatory": {
       "enableConcurrency": true,
@@ -2012,7 +2012,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -2299,7 +2299,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -2703,7 +2703,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -2990,7 +2990,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -3394,7 +3394,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -3681,7 +3681,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -4085,7 +4085,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -4372,7 +4372,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -4776,7 +4776,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -5063,7 +5063,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -5467,7 +5467,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Отключается в ru сервисах"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -5754,7 +5754,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -5914,7 +5914,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -6074,7 +6074,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -6234,7 +6234,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -6394,7 +6394,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -6554,7 +6554,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -6714,7 +6714,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -6874,7 +6874,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -7034,7 +7034,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -7194,7 +7194,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -7354,7 +7354,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -7514,7 +7514,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -7674,7 +7674,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -7834,7 +7834,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -7994,7 +7994,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -8154,7 +8154,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -8314,7 +8314,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -8474,7 +8474,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -8634,7 +8634,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -8794,7 +8794,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -8954,7 +8954,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -9114,7 +9114,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -9274,7 +9274,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -9434,7 +9434,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -9594,7 +9594,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -9754,7 +9754,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -9914,7 +9914,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -10074,7 +10074,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Обычный сервер"
+      "serverDescription": "VLESS / TCP / Reality"
     },
     "outbounds": [
       {
@@ -10234,7 +10234,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Игровой сервер"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -10383,7 +10383,7 @@
       }
     ],
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера"
+      "serverDescription": "Auto Balance"
     },
     "observatory": {
       "enableConcurrency": true,
@@ -10886,7 +10886,7 @@
       }
     ],
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера"
+      "serverDescription": "Auto Balance"
     },
     "observatory": {
       "enableConcurrency": true,
@@ -11352,7 +11352,7 @@
       }
     ],
     "meta": {
-      "serverDescription": "Мобильная связь"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -11615,7 +11615,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Мобильная связь"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -11765,7 +11765,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Мобильная связь"
+      "serverDescription": "VLESS / TLS / Reality"
     },
     "outbounds": [
       {
@@ -11927,7 +11927,7 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера"
+      "serverDescription": "Auto Balance"
     },
     "outbounds": [
       {
