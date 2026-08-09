@@ -50,18 +50,12 @@
       "loglevel": "warning"
     },
     "meta": {
-      "serverDescription": "Автовыбор лучшего сервера",
       "profile-title": "𝗣𝗵𝗹𝘂𝘅 𝘃𝗽𝗻🔥",
       "profile-update-interval": 1,
       "profile-web-page-url": "https://phluxvpn.hs.vc",
       "support-url": "https://t.me/Phluxvpnbot",
-      "providerid": "Dqb26ol8",
       "announce": "👨‍💻 Поддержка — @Phluxvpnbot\n⚡ — Игровые мощные сервера\n✨ — Отключаются в ru сервисах",
-      "subscription-userinfo": "upload=0; download=0; total=0; expire=149280451200",
-      "routing": "happ://routing/onadd/eyJOYW1lIjoiUGhsdXggdnBuIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vY2xvdWRmbGFyZS1kbnMuY29tL2Rucy1xdWVyeSIsIlJlbW90ZUROU0lQIjoiMS4xLjEuMSIsIkRvbWVzdGljRE5TVHlwZSI6IkRvSCIsIkRvbWVzdGljRE5TRG9tYWluIjoiaHR0cHM6Ly9jb21tb24uZG90LmRucy55YW5kZXgubmV0L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJHZW9pcHVybCI6IiIsIkdlb3NpdGV1cmwiOiIiLCJMYXN0VXBkYXRlZCI6IiIsIkRuc0hvc3RzIjp7ImNsb3VkZmxhcmUtZG5zLmNvbSI6IjEuMS4xLjEiLCJjb21tb24uZG90LmRucy55YW5kZXgubmV0IjoiNzcuODguOC44In0sIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6Y2F0ZWdvcnktcnUiLCJkb21haW46b3pvbi5ydSIsImRvbWFpbjpvem9uZS5ydSIsImRvbWFpbjpvem9uLmNvbSIsImRvbWFpbjp3aWxkYmVycmllcy5ydSIsImRvbWFpbjp3Yi5ydSIsImRvbWFpbjp3aWxkYmVycmllcy5ieSIsImRvbWFpbjptYWduaXQucnUiLCJkb21haW46bWFnbml0LmNvbSIsImRvbWFpbjo1a2EucnUiLCJkb21haW46eDUucnUiLCJkb21haW46bGVudGEuY29tIiwiZG9tYWluOnBlcmVrcmVzdG9rLnJ1IiwiZG9tYWluOnNhbW9rYXQucnUiLCJkb21haW46c2Jlcm1hcmtldC5ydSIsImRvbWFpbjp2cHJvay5ydSIsImRvbWFpbjphdWNoYW4ucnUiLCJkb21haW46ZGl4eS5ydSIsImRvbWFpbjptZXRyby1jYy5ydSIsImRvbWFpbjpkbnMtc2hvcC5ydSIsImRvbWFpbjptdmlkZW8ucnUiLCJkb21haW46ZWxkb3JhZG8ucnUiLCJkb21haW46Y2l0aWxpbmsucnUiLCJkb21haW46YWxpZXhwcmVzcy5ydSIsImRvbWFpbjptYXJrZXQueWFuZGV4LnJ1IiwiZG9tYWluOmF2aXRvLnJ1IiwiZG9tYWluOnlvdWxhLnJ1IiwiZG9tYWluOnNiZXJiYW5rLnJ1IiwiZG9tYWluOnNiZXIucnUiLCJkb21haW46c2JlcmJhbmsuY29tIiwiZG9tYWluOnNiZXJkZXZpY2VzLnJ1IiwiZG9tYWluOnRpbmtvZmYucnUiLCJkb21haW46dGJhbmsucnUiLCJkb21haW46dnRiLnJ1IiwiZG9tYWluOmFsZmFiYW5rLnJ1IiwiZG9tYWluOmFsZmFiYW5rLmNvbSIsImRvbWFpbjpnYXpwcm9tYmFuay5ydSIsImRvbWFpbjpncGIucnUiLCJkb21haW46cmFpZmZlaXNlbi5ydSIsImRvbWFpbjpyc2hiLnJ1IiwiZG9tYWluOnNvdmNvbWJhbmsucnUiLCJkb21haW46bWtiLnJ1IiwiZG9tYWluOnJvc2JhbmsucnUiLCJkb21haW46cHNiYW5rLnJ1IiwiZG9tYWluOm9wZW4ucnUiLCJkb21haW46b3Rrcml0aWUucnUiLCJkb21haW46dXJhbHNpYi5ydSIsImRvbWFpbjpwb2NodGFiYW5rLnJ1IiwiZG9tYWluOmhvbWVjcmVkaXQucnUiLCJkb21haW46b3pvbmJhbmsucnUiLCJkb21haW46cWl3aS5jb20iLCJkb21haW46eW9vbW9uZXkucnUiLCJkb21haW46bWlyb25saW5lLnJ1IiwiZG9tYWluOm5zcGsucnUiLCJkb21haW46c2JwLm5zcGsucnUiLCJkb21haW46dmsuY29tIiwiZG9tYWluOnZrLnJ1IiwiZG9tYWluOnZrb250YWt0ZS5ydSIsImRvbWFpbjp1c2VyYXBpLmNvbSIsImRvbWFpbjp2ay1jZG4ubmV0IiwiZG9tYWluOnZrdXNlci5uZXQiLCJkb21haW46dmt1c2VydmlkZW8ubmV0IiwiZG9tYWluOm15Y2RuLm1lIiwiZG9tYWluOm9rLnJ1IiwiZG9tYWluOm9kbm9rbGFzc25pa2kucnUiLCJkb21haW46bWF4LnJ1IiwiZG9tYWluOm9uZW1lLnJ1IiwiZG9tYWluOnRhbXRhbS5jaGF0IiwiZG9tYWluOmljcS5jb20iLCJkb21haW46ZHplbi5ydSIsImRvbWFpbjp6ZW4ueWFuZGV4LnJ1IiwiZG9tYWluOnlhbmRleC5ydSIsImRvbWFpbjp5YW5kZXgubmV0IiwiZG9tYWluOnlhLnJ1IiwiZG9tYWluOnlhc3RhdGljLm5ldCIsImRvbWFpbjptYWlsLnJ1IiwiZG9tYWluOmxpc3QucnUiLCJkb21haW46YmsucnUiLCJkb21haW46aW5ib3gucnUiLCJkb21haW46bW9zLnJ1IiwiZG9tYWluOmdvc3VzbHVnaS5ydSIsImRvbWFpbjpuYWxvZy5ydSIsImRvbWFpbjpuYWxvZy5nb3YucnUiLCJkb21haW46c3VkcmYucnUiLCJkb21haW46cGZyLmdvdi5ydSIsImRvbWFpbjpraW5vcG9pc2sucnUiLCJkb21haW46cnV0dWJlLnJ1IiwiZG9tYWluOml2aS5ydSIsImRvbWFpbjpva2tvLnR2IiwiZG9tYWluOnByZW1pZXIub25lIiwiZG9tYWluOndpbmsucnUiLCJkb21haW46bW9yZS50diIsImRvbWFpbjpzdGFydC5ydSIsImRvbWFpbjptdXNpYy55YW5kZXgucnUiLCJkb21haW46enZ1ay5jb20iLCJkb21haW46Mmdpcy5ydSIsImRvbWFpbjpyemQucnUiLCJkb21haW46YWVyb2Zsb3QucnUiLCJkb21haW46cG9jaHRhLnJ1IiwiZG9tYWluOmNkZWsucnUiLCJkb21haW46Ym94YmVycnkucnUiLCJkb21haW46ZGVsaXZlcnktY2x1Yi5ydSIsImRvbWFpbjplZGEueWFuZGV4LnJ1IiwiZG9tYWluOmhoLnJ1IiwiZG9tYWluOmRyb20ucnUiLCJkb21haW46YXV0by5ydSIsImRvbWFpbjpjaWFuLnJ1IiwiZG9tYWluOmdpc21ldGVvLnJ1IiwiZG9tYWluOm1lZ2Fmb24ucnUiLCJkb21haW46bXRzLnJ1IiwiZG9tYWluOmJlZWxpbmUucnUiLCJkb21haW46dGVsZTIucnUiLCJkb21haW46eW90YS5ydSIsImRvbWFpbjpydC5ydSIsImRvbWFpbjpzYW1va2F0LnJ1IiwiZG9tYWluOm1hcmtldC1kZWxpdmVyeS55YW5kZXgucnUiLCJkb21haW46bGF3LnJ1IiwiZG9tYWluOmNvbnN1bHRhbnQucnUiLCJkb21haW46d2lsZGJlcnJpZXMucnUiLCJkb21haW46c2Jlcm1lZ2FtYXJrZXQucnUiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cnUiLCJnZW9pcDpwcml2YXRlIiwiMTAuMC4wLjAvOCIsIjE3Mi4xNi4wLjAvMTIiLCIxOTIuMTY4LjAuMC8xNiIsIjE2OS4yNTQuMC4wLzE2IiwiMjI0LjAuMC4wLzQiLCIyNTUuMjU1LjI1NS4yNTUiXSwiUHJveHlTaXRlcyI6W10sIlByb3h5SXAiOltdLCJCbG9ja1NpdGVzIjpbImdlb3NpdGU6Y2F0ZWdvcnktYWRzLWFsbCJdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJJUElmTm9uTWF0Y2giLCJGYWtlRE5TIjoiZmFsc2UifQ==",
-      "ping-type": "proxy",
-      "check-url-via-proxy": "https://cp.cloudflare.com/generate_204",
-      "ping-result": "time"
+      "subscription-userinfo": "upload=0; download=0; total=0; expire=149280451200"
     },
     "observatory": {
       "enableConcurrency": true,
@@ -1338,7 +1332,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "⚡ Автоподбор WIFI",
+    "remarks": "⚡ Автоподбор WIFI | Автовыбор лучшего сервера",
     "routing": {
       "balancers": [
         {
@@ -1432,9 +1426,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Автовыбор по пингу"
-    },
+    "meta": null,
     "observatory": {
       "enableConcurrency": true,
       "probeInterval": "3m",
@@ -1670,7 +1662,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "⚡ Автоподбор LTE",
+    "remarks": "⚡ Автоподбор LTE | Автовыбор лучшего сервера",
     "routing": {
       "balancers": [
         {
@@ -2016,9 +2008,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -2071,7 +2061,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇳🇱 Нидерланды ✨",
+    "remarks": "🇳🇱 Нидерланды ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -2303,9 +2293,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -2358,7 +2346,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇳🇱 Нидерланды для игр ⚡",
+    "remarks": "🇳🇱 Нидерланды для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -2707,9 +2695,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -2762,7 +2748,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇺🇸 Сша ✨",
+    "remarks": "🇺🇸 Сша ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -2994,9 +2980,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -3049,7 +3033,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇺🇸 Сша для игр ⚡",
+    "remarks": "🇺🇸 Сша для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -3398,9 +3382,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -3453,7 +3435,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇧🇾 Беларусь ✨",
+    "remarks": "🇧🇾 Беларусь ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -3685,9 +3667,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -3740,7 +3720,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇧🇾 Беларусь для игр ⚡",
+    "remarks": "🇧🇾 Беларусь для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -4089,9 +4069,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -4144,7 +4122,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇩🇪 Германия ✨",
+    "remarks": "🇩🇪 Германия ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -4376,9 +4354,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -4431,7 +4407,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇩🇪 Германия для игр ⚡",
+    "remarks": "🇩🇪 Германия для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -4780,9 +4756,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -4835,7 +4809,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇸 Испания ✨",
+    "remarks": "🇪🇸 Испания ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -5067,9 +5041,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -5122,7 +5094,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇸 Испания для игр ⚡",
+    "remarks": "🇪🇸 Испания для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -5471,9 +5443,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Обход ru сервисов"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -5526,7 +5496,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇮🇹 Италия ✨",
+    "remarks": "🇮🇹 Италия ✨ | Отключается в ru сервисах",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -5758,9 +5728,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -5813,7 +5781,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇮🇹 Италия для игр ⚡",
+    "remarks": "🇮🇹 Италия для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -5918,9 +5886,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6078,9 +6044,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6133,7 +6097,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇬🇧 Великобритания для игр ⚡",
+    "remarks": "🇬🇧 Великобритания для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -6238,9 +6202,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для YouTube"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6293,7 +6255,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇷🇺 Россия Youtube 🎬 #1",
+    "remarks": "🇷🇺 Россия Youtube 🎬 #1 | Стабильный Россия YouTube",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -6398,9 +6360,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для YouTube"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6453,7 +6413,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇷🇺 Россия Youtube 🎬 #2",
+    "remarks": "🇷🇺 Россия Youtube 🎬 #2 | Стабильный Россия YouTube",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -6558,9 +6518,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6718,9 +6676,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -6773,7 +6729,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇯🇵 Япония для игр ⚡",
+    "remarks": "🇯🇵 Япония для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -6878,9 +6834,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7038,9 +6992,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7198,9 +7150,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7253,7 +7203,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇨🇦 Канада для игр ⚡",
+    "remarks": "🇨🇦 Канада для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -7358,9 +7308,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7518,9 +7466,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7573,7 +7519,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇮 Финляндия для игр ⚡",
+    "remarks": "🇫🇮 Финляндия для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -7678,9 +7624,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7838,9 +7782,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -7893,7 +7835,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇹🇷 Турция для игр ⚡",
+    "remarks": "🇹🇷 Турция для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -7998,9 +7940,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8158,9 +8098,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8318,9 +8256,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8373,7 +8309,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇸🇪 Швеция для игр ⚡",
+    "remarks": "🇸🇪 Швеция для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -8478,9 +8414,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8638,9 +8572,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8693,7 +8625,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇱🇹 Литва для игр ⚡",
+    "remarks": "🇱🇹 Литва для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -8798,9 +8730,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -8958,9 +8888,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9013,7 +8941,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇪 Эстония для игр ⚡",
+    "remarks": "🇪🇪 Эстония для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -9118,9 +9046,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9278,9 +9204,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9333,7 +9257,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇫🇷 Франция для игр ⚡",
+    "remarks": "🇫🇷 Франция для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -9438,9 +9362,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9598,9 +9520,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9653,7 +9573,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇦🇪 Дубай для игр ⚡",
+    "remarks": "🇦🇪 Дубай для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -9758,9 +9678,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9918,9 +9836,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -9973,7 +9889,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇰🇿 Казахстан для игр ⚡",
+    "remarks": "🇰🇿 Казахстан для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -10078,9 +9994,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "VLESS / TCP / REALITY"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -10238,9 +10152,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Для игр"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -10293,7 +10205,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇵🇱 Польша для игр ⚡",
+    "remarks": "🇵🇱 Польша для игр ⚡ | Игровой сервер",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "AsIs",
@@ -10387,9 +10299,7 @@
         "tag": "http"
       }
     ],
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "observatory": {
       "enableConcurrency": true,
       "probeInterval": "1m",
@@ -10506,7 +10416,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #1",
+    "remarks": "🇪🇺 Мобильная связь #1 | Мобильная связь",
     "routing": {
       "balancers": [
         {
@@ -10890,9 +10800,7 @@
         "tag": "http"
       }
     ],
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "observatory": {
       "enableConcurrency": true,
       "probeInterval": "1m",
@@ -10978,7 +10886,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #2",
+    "remarks": "🇪🇺 Мобильная связь #2 | Мобильная связь",
     "routing": {
       "balancers": [
         {
@@ -11356,9 +11264,7 @@
         "tag": "http"
       }
     ],
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -11406,7 +11312,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #3",
+    "remarks": "🇪🇺 Мобильная связь #3 | Мобильная связь",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -11619,9 +11525,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -11664,7 +11568,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #4",
+    "remarks": "🇪🇺 Мобильная связь #4 | Мобильная связь",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -11769,9 +11673,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "vless",
@@ -11814,7 +11716,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #5",
+    "remarks": "🇪🇺 Мобильная связь #5 | Мобильная связь",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -11931,9 +11833,7 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": {
-      "serverDescription": "Мобильная связь"
-    },
+    "meta": null,
     "outbounds": [
       {
         "protocol": "hysteria",
@@ -11992,7 +11892,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "🇪🇺 Мобильная связь #6",
+    "remarks": "🇪🇺 Мобильная связь #6 | Мобильная связь",
     "routing": {
       "balancers": [
         {
