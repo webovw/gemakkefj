@@ -11582,7 +11582,9 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": null,
+    "meta": {
+      "serverDescription": "Мобильная связь"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -11625,7 +11627,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "Phlux vpn",
+    "remarks": "🇪🇺 Мобильная связь #4",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -11730,7 +11732,9 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": null,
+    "meta": {
+      "serverDescription": "Мобильная связь"
+    },
     "outbounds": [
       {
         "protocol": "vless",
@@ -11773,7 +11777,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "Phlux vpn",
+    "remarks": "🇪🇺 Мобильная связь #5",
     "routing": {
       "domainMatcher": "hybrid",
       "domainStrategy": "IPIfNonMatch",
@@ -11890,7 +11894,9 @@
     "log": {
       "loglevel": "warning"
     },
-    "meta": null,
+    "meta": {
+      "serverDescription": "Мобильная связь"
+    },
     "outbounds": [
       {
         "protocol": "hysteria",
@@ -11949,7 +11955,7 @@
         "tag": "block"
       }
     ],
-    "remarks": "Phlux vpn",
+    "remarks": "🇪🇺 Мобильная связь #6",
     "routing": {
       "balancers": [
         {
