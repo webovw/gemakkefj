@@ -1,0 +1,90 @@
+{
+  "log": { "loglevel": "warning" },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": { "auth": "noauth", "udp": true },
+      "sniffing": { "enabled": true, "destOverride": ["http", "tls", "quic"] },
+      "tag": "socks"
+    }
+  ],
+  "burstObservatory": {
+    "subjectSelector": ["auto-node-"],
+    "pingConfig": {
+      "destination": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "timeout": "5s",
+      "sampling": 3
+    }
+  },
+  "outbounds": [
+    {
+      "tag": "auto-node-1-goodwin",
+      "protocol": "vless",
+      "settings": { "vnext": [ { "address": "goodwin-pro.tlsov.pro", "port": 443, "users": [ { "id": "38d28b1d-8675-4e4c-80bc-ad2315bfb8cc", "encryption": "none" } ] } ] },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": { "serviceName": "ads.x5.ru", "multiMode": false },
+        "realitySettings": { "serverName": "ads.x5.ru", "fingerprint": "qq", "publicKey": "K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs", "shortId": "50", "spiderX": "/" }
+      }
+    },
+    {
+      "tag": "auto-node-2-yandex",
+      "protocol": "vless",
+      "settings": { "vnext": [ { "address": "79.174.92.149", "port": 443, "users": [ { "id": "83ef6f40-2397-4fb1-8c03-537839c55a35", "encryption": "none" } ] } ] },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": { "serviceName": "/api/v1/stream", "multiMode": false },
+        "realitySettings": { "serverName": "smartcaptcha.yandexcloud.net", "fingerprint": "safari", "publicKey": "YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ", "shortId": "0ed41244d37d4afe", "spiderX": "/" }
+      }
+    },
+    {
+      "tag": "auto-node-3-hole",
+      "protocol": "vless",
+      "settings": { "vnext": [ { "address": "hole-nn.datanode-internal.net", "port": 443, "users": [ { "id": "402ced46-cf91-41f3-87a4-0a1a9e939a35", "encryption": "none" } ] } ] },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": { "serviceName": "ads.x5.ru", "multiMode": false },
+        "realitySettings": { "serverName": "ads.x5.ru", "fingerprint": "qq", "publicKey": "r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic", "shortId": "abbcd128", "spiderX": "/" }
+      }
+    },
+    {
+      "tag": "auto-node-4-freedom",
+      "protocol": "vless",
+      "settings": { "vnext": [ { "address": "wl-1.myfreedom.rest", "port": 443, "users": [ { "id": "fd12bf77-bca4-4ccc-8bd0-76a2cfc5985a", "encryption": "none", "flow": "xtls-rprx-vision" } ] } ] },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": { "serverName": "ads.vk.ru", "fingerprint": "firefox", "publicKey": "sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk", "shortId": "c427", "spiderX": "/" }
+      }
+    },
+    { "tag": "direct", "protocol": "freedom", "settings": { "domainStrategy": "UseIPv4" } },
+    { "tag": "block", "protocol": "blackhole" }
+  ],
+  "remarks": "🌐Автоподбор LTE",
+  "routing": {
+    "domainStrategy": "AsIs",
+    "domainMatcher": "hybrid",
+    "balancers": [
+      {
+        "tag": "auto",
+        "selector": ["auto-node-"],
+        "fallbackTag": "auto-node-1-goodwin",
+        "strategy": { "type": "leastPing" }
+      }
+    ],
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.0/8", "169.254.0.0/16", "::1/128", "fc00::/7", "fe80::/10"]
+      },
+      { "type": "field", "balancerTag": "auto", "network": "tcp,udp" }
+    ]
+  }
+}
