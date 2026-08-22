@@ -2,7 +2,7 @@ name: Auto Update Fastest Servers
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Запуск каждые 20 минут
+    - cron: '*/5 * * * *'  # Запуск каждые 5 минут
   workflow_dispatch:        # Кнопка ручного запуска
 
 jobs:
