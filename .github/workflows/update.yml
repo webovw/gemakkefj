@@ -1,0 +1,30 @@
+name: Auto Update Fastest Servers
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'  # Запуск каждые 20 минут
+  workflow_dispatch:        # Кнопка ручного запуска
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Скачать репозиторий
+        uses: actions/checkout@v4
+
+      - name: Настроить Python
+        uses: setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Замерить пинг и обновить index.html
+        run: python generator.py
+
+      - name: Сохранить в репозиторий
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update fastest servers" && git push)
