@@ -1,6 +1,7 @@
 import base64
 import time
 import socket
+from datetime import datetime
 
 def b64(s):
     return base64.b64encode(s.encode('utf-8')).decode('utf-8')
@@ -11,7 +12,6 @@ desc_lte  = b64("Для LTE")
 
 # Список нод WIFI: (vless_ссылка_без_имени, хост, порт, имя)
 wifi_nodes = [
-    # --- ОСНОВНЫЕ СЕРВЕРА ---
     ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision", "usa.oblaco.bet", 443, "🇺🇸 США ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "nl.tlsov.pro", 443, "🇳🇱 Нидерланды ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "fi.tlsov.pro", 443, "🇫🇮 Финляндия ✨"),
@@ -88,32 +88,30 @@ servers = [
     best_wifi,
     best_lte,
     
-    # 1. Основные сервера
     sep_main,
-    f"{wifi_nodes[0][0]}#{wifi_nodes[0][3]}?serverDescription={desc_wifi}", # США
-    f"{wifi_nodes[1][0]}#{wifi_nodes[1][3]}?serverDescription={desc_wifi}", # Нидерланды
-    f"{wifi_nodes[2][0]}#{wifi_nodes[2][3]}?serverDescription={desc_wifi}", # Финляндия
-    f"{wifi_nodes[3][0]}#{wifi_nodes[3][3]}?serverDescription={desc_wifi}", # Латвия
-    ru_youtube,                                                             # Россия Youtube (спец. сервер, вне подбора)
-    f"{wifi_nodes[4][0]}#{wifi_nodes[4][3]}?serverDescription={desc_wifi}", # Германия
-    f"{wifi_nodes[5][0]}#{wifi_nodes[5][3]}?serverDescription={desc_wifi}", # Польша
+    f"{wifi_nodes[0][0]}#{wifi_nodes[0][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[1][0]}#{wifi_nodes[1][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[2][0]}#{wifi_nodes[2][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[3][0]}#{wifi_nodes[3][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[4][0]}#{wifi_nodes[4][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[5][0]}#{wifi_nodes[5][3]}?serverDescription={desc_wifi}",
+    ru_youtube,
     
-    # 2. Обходы (LTE)
     sep_obhod,
-    f"{lte_nodes[0][0]}#{lte_nodes[0][3]}?serverDescription={desc_lte}", # Обход #1
-    f"{lte_nodes[1][0]}#{lte_nodes[1][3]}?serverDescription={desc_lte}", # Обход #2
-    f"{lte_nodes[2][0]}#{lte_nodes[2][3]}?serverDescription={desc_lte}", # Обход #3
-    f"{lte_nodes[3][0]}#{lte_nodes[3][3]}?serverDescription={desc_lte}", # Обход #4
-    f"{lte_nodes[4][0]}#{lte_nodes[4][3]}?serverDescription={desc_lte}", # Обход #5
-    f"{lte_nodes[5][0]}#{lte_nodes[5][3]}?serverDescription={desc_lte}", # Обход #6
-    f"{lte_nodes[6][0]}#{lte_nodes[6][3]}?serverDescription={desc_lte}", # Обход #7
+    f"{lte_nodes[0][0]}#{lte_nodes[0][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[1][0]}#{lte_nodes[1][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[2][0]}#{lte_nodes[2][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[3][0]}#{lte_nodes[3][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[4][0]}#{lte_nodes[4][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[5][0]}#{lte_nodes[5][3]}?serverDescription={desc_lte}",
+    f"{lte_nodes[6][0]}#{lte_nodes[6][3]}?serverDescription={desc_lte}",
 ]
 
 full_text = "\r\n".join(headers + servers) + "\r\n"
 b64_output = base64.b64encode(full_text.encode('utf-8')).decode('utf-8')
 
-# Перезаписываем index.html для твоего GitHub Pages
+# Перезаписываем index.html
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(b64_output)
 
-print("Файл index.html успешно обновлен и готов к коммиту в GitHub!")
+print("Файл index.html успешно обновлен и готов к коммиту!")
