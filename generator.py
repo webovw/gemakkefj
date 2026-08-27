@@ -10,11 +10,12 @@ desc_fast = b64("Самые быстрые сервера")
 desc_wifi = b64("Для WIFI")
 desc_lte  = b64("Для LTE")
 
-# Список нод WIFI: (vless_ссылка_без_имени, хост, порт, имя)
+# Список нод WIFI: (vless/hysteria_ссылка_без_имени, хост, порт, имя)
 wifi_nodes = [
     ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision", "usa.oblaco.bet", 443, "🇺🇸 США ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "nl.tlsov.pro", 443, "🇳🇱 Нидерланды ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "fi.tlsov.pro", 443, "🇫🇮 Финляндия ✨"),
+    ("hysteria2://d39b5724-76a0-44f1-98d0-089f78886ad2@segfddd.save-node.com:443?sni=segfddd.save-node.com", "segfddd.save-node.com", 443, "🇸🇪 Швеция ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "lat.tlsov.pro", 443, "🇱🇻 Латвия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@de.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "de.tlsov.pro", 443, "🇩🇪 Германия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "pl.tlsov.pro", 443, "🇵🇱 Польша  ✨"),
@@ -23,12 +24,12 @@ wifi_nodes = [
 # Список нод LTE: (Только обходы 1-7)
 lte_nodes = [
     ("vless://402ced46-cf91-41f3-87a4-0a1a9e939a35@hole-nn.datanode-internal.net:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic&sid=abbcd128&spx=%2F&serviceName=ads.x5.ru", "hole-nn.datanode-internal.net", 443, "🇪🇺 Обход #1"),
-    ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@185.22.234.208:443?type=tcp&security=reality&sni=focus.de&fp=firefox&pbk=wH_fxXI9Lvy7XMW-HZIR4JfodYmS1LP53fMJqqw6e3k&spx=%2F&flow=xtls-rprx-vision", "185.22.234.208", 443, "🇪🇺 Обход #2"),
-    ("vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&pbk=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream", "79.174.92.149", 443, "🇪🇺 Обход #3"),
-    ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@185.22.234.208:443?type=tcp&security=reality&sni=focus.de&fp=firefox&pbk=wH_fxXI9Lvy7XMW-HZIR4JfodYmS1LP53fMJqqw6e3k&spx=%2F&flow=xtls-rprx-vision", "185.22.234.208", 443, "🇪🇺 Обход #4"),
-    ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@185.22.234.208:443?type=tcp&security=reality&sni=focus.de&fp=firefox&pbk=wH_fxXI9Lvy7XMW-HZIR4JfodYmS1LP53fMJqqw6e3k&spx=%2F&flow=xtls-rprx-vision", "185.22.234.208", 443, "🇪🇺 Обход #5"),
-    ("vless://4054fdc2-ee80-4419-8a8e-d937df4719e2@qq.utiltools.ru:443?type=tcp&security=reality&sni=qq.utiltools.ru&fp=qq&pbk=drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI&spx=%2F&flow=xtls-rprx-vision", "qq.utiltools.ru", 443, "🇪🇺 Обход #6"),
-    ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@185.22.234.208:443?type=tcp&security=reality&sni=focus.de&fp=firefox&pbk=wH_fxXI9Lvy7XMW-HZIR4JfodYmS1LP53fMJqqw6e3k&spx=%2F&flow=xtls-rprx-vision", "185.22.234.208", 443, "🇪🇺 Обход #7"),
+    ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@goodwin-pro.tlsov.pro:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=50&spx=%2F&serviceName=ads.x5.ru", "goodwin-pro.tlsov.pro", 443, "🇪🇺 Обход #2"),
+    ("vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&mbv=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream", "79.174.92.149", 443, "🇪🇺 Обход #3"),
+    ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@90.156.218.236:443?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F", "90.156.218.236", 443, "🇪🇺 Обход #4"),
+    ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online", "founders-blog.online", 443, "🇪🇺 Обход #5"),
+    ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online", "founders-blog.online", 443, "🇪🇺 Обход #6"),
+    ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@176.109.85.63:8444?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F", "176.109.85.63", 8444, "🇪🇺 Обход #7"),
 ]
 
 # Сервер ютуба (Не участвует в автоподборе)
@@ -95,6 +96,7 @@ servers = [
     f"{wifi_nodes[3][0]}#{wifi_nodes[3][3]}?serverDescription={desc_wifi}",
     f"{wifi_nodes[4][0]}#{wifi_nodes[4][3]}?serverDescription={desc_wifi}",
     f"{wifi_nodes[5][0]}#{wifi_nodes[5][3]}?serverDescription={desc_wifi}",
+    f"{wifi_nodes[6][0]}#{wifi_nodes[6][3]}?serverDescription={desc_wifi}",
     ru_youtube,
     
     sep_obhod,
