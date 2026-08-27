@@ -1,7 +1,7 @@
 import base64
 import time
 import socket
-from datetime import datetime
+import concurrent.futures
 
 def b64(s):
     return base64.b64encode(s.encode('utf-8')).decode('utf-8')
@@ -10,7 +10,7 @@ desc_fast = b64("Самые быстрые сервера")
 desc_wifi = b64("Для WIFI")
 desc_lte  = b64("Для LTE")
 
-# Список нод WIFI: (vless/hysteria_ссылка_без_имени, хост, порт, имя)
+# Список нод WIFI: (ссылка без имени, хост, порт, имя)
 wifi_nodes = [
     ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision", "usa.oblaco.bet", 443, "🇺🇸 США ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "nl.tlsov.pro", 443, "🇳🇱 Нидерланды ✨"),
@@ -18,7 +18,7 @@ wifi_nodes = [
     ("hysteria2://d39b5724-76a0-44f1-98d0-089f78886ad2@segfddd.save-node.com:443?sni=segfddd.save-node.com", "segfddd.save-node.com", 443, "🇸🇪 Швеция ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "lat.tlsov.pro", 443, "🇱🇻 Латвия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@de.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "de.tlsov.pro", 443, "🇩🇪 Германия ✨"),
-    ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "pl.tlsov.pro", 443, "🇵🇱 Польша  ✨"),
+    ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "pl.tlsov.pro", 443, "🇵🇱 Польша ✨"),
 ]
 
 # Список нод LTE: (Только обходы 1-7)
@@ -35,15 +35,14 @@ lte_nodes = [
 # Сервер ютуба (Не участвует в автоподборе)
 ru_youtube = f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}"
 
-# Разделители (Не участвуют в автоподборе)
+# Разделители
 sep_main = "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОСНОВНЫЕ СЕРВЕРА ───"
 sep_obhod = "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОБХОД БС ───"
-
 
 def ping_tcp(host, port):
     t0 = time.time()
     try:
-        s = socket.create_connection((host, int(port)), timeout=2.5)
+        s = socket.create_connection((host, int(port)), timeout=2.0)
         s.close()
         return time.time() - t0
     except Exception:
@@ -52,19 +51,28 @@ def ping_tcp(host, port):
 def get_fastest(nodes, auto_title):
     best_item = nodes[0]
     min_lat = 999.0
-    for item in nodes:
+    
+    def check_node(item):
         raw_link, host, port, title = item
         latency = ping_tcp(host, port)
-        print(f"[{title}] Latency: {latency*1000:.1f} ms")
+        return latency, item
+
+    # Многопоточная проверка (очень быстро)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        results = executor.map(check_node, nodes)
+        
+    for latency, item in results:
+        print(f"[{item[3]}] Задержка: {latency*1000:.1f} мс")
         if latency < min_lat:
             min_lat = latency
             best_item = item
+            
     return f"{best_item[0]}#{auto_title}?serverDescription={desc_fast}"
 
-print("Проверка WIFI серверов (Основные)...")
+print("Проверка WIFI серверов...")
 best_wifi = get_fastest(wifi_nodes, "🌐 Автоподбор WIFI")
 
-print("Проверка LTE серверов (Только обходы)...")
+print("\nПроверка LTE серверов...")
 best_lte = get_fastest(lte_nodes, "🌐 Автоподбор LTE")
 
 headers = [
@@ -112,8 +120,7 @@ servers = [
 full_text = "\r\n".join(headers + servers) + "\r\n"
 b64_output = base64.b64encode(full_text.encode('utf-8')).decode('utf-8')
 
-# Перезаписываем index.html
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(b64_output)
 
-print("Файл index.html успешно обновлен и готов к коммиту!")
+print("\n✅ Файл index.html успешно сгенерирован!")
