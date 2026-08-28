@@ -86,7 +86,7 @@ servers = [
 for raw_link, host, port, title in wifi_nodes:
     servers.append(f"{raw_link}#{title}?serverDescription={desc_wifi}")
 
-# Вручную добавляем "Россия Youtube", так как мы исключили её из списка для пинга
+# Вручную добавляем сервер "Россия Youtube" (он исключен из списка для пинга)
 servers.append(f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}")
 
 # Добавляем разделитель для LTE
