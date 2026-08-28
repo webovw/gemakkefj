@@ -75,26 +75,28 @@ headers = [
     '#color-profile: {"backgroundGradientRotationAngle":125,"backgroundGradientColorIntensity":1,"backgroundColors":["#0A1628FF","#0D3B2EFF","#1A0A3DFF","#0A2840FF","#1A1A0AFF"],"backgroundImageType":"dark","elipseColors":["#00FFB3AA","#B388FFCC","#00E5FF99"],"buttonColor":"#00FFB3FF","buttonTextColor":"#0A1628FF","buttonTimerColor":"#0A1628FF","buttonImageType":"dark","powerIconColor":"#00FFB3FF","additionalOptionsButtonColor":"#B388FFFF","topBarButtonsColor":"#B388FFFF","subHeaderButtonColor":"#00E5FFFF","subsHeaderColor":"#0D3B2E99","disclosureHeaderTextColor":"#E0FFF8FF","disclosureSubHeaderTextColor":"#80CBC4FF","serverRowBackgroundColor":"#0D3B2E44","selectedServerRowColor":"#00FFB344","serverRowTitleTextColor":"#E0FFF8FF","serverRowSubTitleTextColor":"#80CBC4FF","serverRowChevronColor":"#80CBC4FF","subscriptionInfoBackgroundColor":"#0A162899","subscriptionInfoTextColor":"#E0FFF8FF","subscriptionTrafficBackgroundColor":"#00FFB322","profileWebPageIconColor":"#FF80ABFF","supportIconColor":"#00E5FFFF","settingsControlsTintColor":"#00FFB3FF"}'
 ]
 
-# Добавляем результаты автоподбора и первый разделитель
+# Прямой список серверов (без циклов) - строгий порядок, Россия Youtube строго под Швейцарией
 servers = [
     best_wifi,
     best_lte,
-    "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОСНОВНЫЕ СЕРВЕРА ───"
+    "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОСНОВНЫЕ СЕРВЕРА ───",
+    f"vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision#🇺🇸 США ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇳🇱 Нидерланды ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇫🇮 Финляндия ✨?serverDescription={desc_wifi}",
+    f"hysteria2://d39b5724-76a0-44f1-98d0-089f78886ad2@segfddd.save-node.com:443?sni=segfddd.save-node.com#🇨🇭 Швейцария ✨?serverDescription={desc_wifi}",
+    f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇱🇻 Латвия ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@de.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇩🇪 Германия ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇵🇱 Польша ✨?serverDescription={desc_wifi}",
+    "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОБХОД БС ───",
+    f"vless://402ced46-cf91-41f3-87a4-0a1a9e939a35@hole-nn.datanode-internal.net:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic&sid=abbcd128&spx=%2F&serviceName=ads.x5.ru#🇪🇺 Обход #1?serverDescription={desc_lte}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@goodwin-pro.tlsov.pro:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=50&spx=%2F&serviceName=ads.x5.ru#🇪🇺 Обход #2?serverDescription={desc_lte}",
+    f"vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&pbk=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream#🇪🇺 Обход #3?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@90.156.218.236:443?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F#🇪🇺 Обход #4?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online#🇪🇺 Обход #5?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online#🇪🇺 Обход #6?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@176.109.85.63:8444?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F#🇪🇺 Обход #7?serverDescription={desc_lte}",
 ]
-
-# Автоматически добавляем все WIFI сервера из списка (чтобы не дублировать код)
-for raw_link, host, port, title in wifi_nodes:
-    servers.append(f"{raw_link}#{title}?serverDescription={desc_wifi}")
-
-# Вручную добавляем сервер "Россия Youtube" (он исключен из списка для пинга)
-servers.append(f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}")
-
-# Добавляем разделитель для LTE
-servers.append("hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОБХОД БС ───")
-
-# Автоматически добавляем все LTE сервера из списка
-for raw_link, host, port, title in lte_nodes:
-    servers.append(f"{raw_link}#{title}?serverDescription={desc_lte}")
 
 full_text = "\r\n".join(headers + servers) + "\r\n"
 b64_output = base64.b64encode(full_text.encode('utf-8')).decode('utf-8')
