@@ -1,7 +1,6 @@
 import base64
 import time
 import socket
-import concurrent.futures
 
 def b64(s):
     return base64.b64encode(s.encode('utf-8')).decode('utf-8')
@@ -10,39 +9,31 @@ desc_fast = b64("Самые быстрые сервера")
 desc_wifi = b64("Для WIFI")
 desc_lte  = b64("Для LTE")
 
-# Список нод WIFI: (ссылка без имени, хост, порт, имя)
+# Список нод WIFI: (vless_ссылка_без_хэша, хост, порт, имя)
 wifi_nodes = [
     ("vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision", "usa.oblaco.bet", 443, "🇺🇸 США ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "nl.tlsov.pro", 443, "🇳🇱 Нидерланды ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "fi.tlsov.pro", 443, "🇫🇮 Финляндия ✨"),
-    ("hysteria2://d39b5724-76a0-44f1-98d0-089f78886ad2@segfddd.save-node.com:443?sni=segfddd.save-node.com", "segfddd.save-node.com", 443, "🇸🇪 Швеция ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "lat.tlsov.pro", 443, "🇱🇻 Латвия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@de.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "de.tlsov.pro", 443, "🇩🇪 Германия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "pl.tlsov.pro", 443, "🇵🇱 Польша ✨"),
 ]
 
-# Список нод LTE: (Только обходы 1-7)
+# Список нод LTE:
 lte_nodes = [
     ("vless://402ced46-cf91-41f3-87a4-0a1a9e939a35@hole-nn.datanode-internal.net:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic&sid=abbcd128&spx=%2F&serviceName=ads.x5.ru", "hole-nn.datanode-internal.net", 443, "🇪🇺 Обход #1"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@goodwin-pro.tlsov.pro:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=50&spx=%2F&serviceName=ads.x5.ru", "goodwin-pro.tlsov.pro", 443, "🇪🇺 Обход #2"),
-    ("vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&mbv=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream", "79.174.92.149", 443, "🇪🇺 Обход #3"),
+    ("vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&pbk=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream", "79.174.92.149", 443, "🇪🇺 Обход #3"),
     ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@90.156.218.236:443?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F", "90.156.218.236", 443, "🇪🇺 Обход #4"),
     ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online", "founders-blog.online", 443, "🇪🇺 Обход #5"),
     ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online", "founders-blog.online", 443, "🇪🇺 Обход #6"),
     ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@176.109.85.63:8444?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F", "176.109.85.63", 8444, "🇪🇺 Обход #7"),
 ]
 
-# Сервер ютуба (Не участвует в автоподборе)
-ru_youtube = f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}"
-
-# Разделители
-sep_main = "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОСНОВНЫЕ СЕРВЕРА ───"
-sep_obhod = "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОБХОД БС ───"
-
 def ping_tcp(host, port):
     t0 = time.time()
     try:
-        s = socket.create_connection((host, int(port)), timeout=2.0)
+        s = socket.create_connection((host, int(port)), timeout=2.5)
         s.close()
         return time.time() - t0
     except Exception:
@@ -51,28 +42,19 @@ def ping_tcp(host, port):
 def get_fastest(nodes, auto_title):
     best_item = nodes[0]
     min_lat = 999.0
-    
-    def check_node(item):
+    for item in nodes:
         raw_link, host, port, title = item
         latency = ping_tcp(host, port)
-        return latency, item
-
-    # Многопоточная проверка (очень быстро)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(check_node, nodes)
-        
-    for latency, item in results:
-        print(f"[{item[3]}] Задержка: {latency*1000:.1f} мс")
+        print(f"[{title}] Latency: {latency*1000:.1f} ms")
         if latency < min_lat:
             min_lat = latency
             best_item = item
-            
     return f"{best_item[0]}#{auto_title}?serverDescription={desc_fast}"
 
 print("Проверка WIFI серверов...")
 best_wifi = get_fastest(wifi_nodes, "🌐 Автоподбор WIFI")
 
-print("\nПроверка LTE серверов...")
+print("Проверка LTE серверов...")
 best_lte = get_fastest(lte_nodes, "🌐 Автоподбор LTE")
 
 headers = [
@@ -96,25 +78,23 @@ headers = [
 servers = [
     best_wifi,
     best_lte,
-    
-    sep_main,
-    f"{wifi_nodes[0][0]}#{wifi_nodes[0][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[1][0]}#{wifi_nodes[1][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[2][0]}#{wifi_nodes[2][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[3][0]}#{wifi_nodes[3][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[4][0]}#{wifi_nodes[4][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[5][0]}#{wifi_nodes[5][3]}?serverDescription={desc_wifi}",
-    f"{wifi_nodes[6][0]}#{wifi_nodes[6][3]}?serverDescription={desc_wifi}",
-    ru_youtube,
-    
-    sep_obhod,
-    f"{lte_nodes[0][0]}#{lte_nodes[0][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[1][0]}#{lte_nodes[1][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[2][0]}#{lte_nodes[2][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[3][0]}#{lte_nodes[3][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[4][0]}#{lte_nodes[4][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[5][0]}#{lte_nodes[5][3]}?serverDescription={desc_lte}",
-    f"{lte_nodes[6][0]}#{lte_nodes[6][3]}?serverDescription={desc_lte}",
+    "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОСНОВНЫЕ СЕРВЕРА ───",
+    f"vless://f3d4f530-ca70-4e99-b2bb-c90e63abf65e@usa.oblaco.bet:443?type=tcp&security=reality&sni=usa.oblaco.bet&fp=firefox&pbk=mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0&spx=%2F&flow=xtls-rprx-vision#🇺🇸 США ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇳🇱 Нидерланды ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇫🇮 Финляндия ✨?serverDescription={desc_wifi}",
+    f"hysteria2://d39b5724-76a0-44f1-98d0-089f78886ad2@segfddd.save-node.com:443?sni=segfddd.save-node.com#🇸🇪 Швеция ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇱🇻 Латвия ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@de.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇩🇪 Германия ✨?serverDescription={desc_wifi}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@pl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision#🇵🇱 Польша ✨?serverDescription={desc_wifi}",
+    f"vless://6bef6685-e989-467c-8fea-7fa1c6a0af2c@194.156.26.16:443?type=ws&security=tls&sni=LZc2j8i5PteXj5I7Aq0hFxQadvZcq.wF99sAF201Sfs9.wOrKers.dev&fp=qq&path=%2Fvl%2FBBj8crirrHMxntD7H3o3z#🇷🇺 Россия Youtube 🎬?serverDescription={desc_wifi}",
+    "hysteria2://00000000-0000-0000-0000-000000000004@0.0.0.0:443?type=tcp&security=reality&sni=example.com&fp=firefox&sid=00000004&spx=%2F#─── ОБХОД БС ───",
+    f"vless://402ced46-cf91-41f3-87a4-0a1a9e939a35@hole-nn.datanode-internal.net:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=r6lN34m1nN-xQZ458j5NPD5xJ3_QBF2bGzY4KJEo4ic&sid=abbcd128&spx=%2F&serviceName=ads.x5.ru#🇪🇺 Обход #1?serverDescription={desc_lte}",
+    f"vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@goodwin-pro.tlsov.pro:443?type=grpc&security=reality&sni=ads.x5.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=50&spx=%2F&serviceName=ads.x5.ru#🇪🇺 Обход #2?serverDescription={desc_lte}",
+    f"vless://83ef6f40-2397-4fb1-8c03-537839c55a35@79.174.92.149:443?type=grpc&security=reality&sni=smartcaptcha.yandexcloud.net&fp=safari&pbk=YkSkOZx_fKqpdyFD_ICMEahkAgG5drRkawHC2f3xlUQ&sid=0ed41244d37d4afe&spx=%2F&serviceName=%2Fapi%2Fv1%2Fstream#🇪🇺 Обход #3?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@90.156.218.236:443?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F#🇪🇺 Обход #4?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online#🇪🇺 Обход #5?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@founders-blog.online:443?type=ws&security=tls&sni=founders-blog.online&fp=chrome&path=%2Fstream%2F615428%2Fsocket&host=founders-blog.online#🇪🇺 Обход #6?serverDescription={desc_lte}",
+    f"vless://d39b5724-76a0-44f1-98d0-089f78886ad2@176.109.85.63:8444?type=grpc&security=reality&sni=360.yandex.ru&fp=firefox&pbk=VaKp9XjMqT7lA4F3b6hpdF6fmsiY4B_hz6MzT6fv938&spx=%2F#🇪🇺 Обход #7?serverDescription={desc_lte}"
 ]
 
 full_text = "\r\n".join(headers + servers) + "\r\n"
@@ -123,4 +103,8 @@ b64_output = base64.b64encode(full_text.encode('utf-8')).decode('utf-8')
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(b64_output)
 
-print("\n✅ Файл index.html успешно сгенерирован!")
+with open("sub_raw.txt", "w", encoding="utf-8") as f:
+    f.write(full_text)
+
+print("Файл index.html успешно обновлен!")
+print("Всего серверов:", len(servers))
