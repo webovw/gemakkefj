@@ -11,7 +11,6 @@ desc_lte  = b64("Для LTE")
 
 # Список нод WIFI: (vless_ссылка_без_хэша, хост, порт, имя)
 wifi_nodes = [
-    ("vless://d39b5724-76a0-44f1-98d0-089f78886ad2@lllkkd.save-node.com:443?type=tcp&security=reality&sni=lllkkd.save-node.com&fp=firefox&pbk=3par0TzZau_hWBaViirT7zlEfcRv1xzOgc-gigtcFWE&sid=45ee70d182e5&spx=%2F&flow=xtls-rprx-vision", "lllkkd.save-node.com", 443, "🇺🇸 США ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@nl.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "nl.tlsov.pro", 443, "🇳🇱 Нидерланды ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@fi.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "fi.tlsov.pro", 443, "🇫🇮 Финляндия ✨"),
     ("vless://38d28b1d-8675-4e4c-80bc-ad2315bfb8cc@lat.tlsov.pro:443?type=tcp&security=reality&sni=vedomosti.ru&fp=qq&pbk=K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs&sid=1000&spx=%2F&flow=xtls-rprx-vision", "lat.tlsov.pro", 443, "🇱🇻 Латвия ✨"),
